@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Information
-    static final String DB_Name = "persistentExpenseManager";
+    static final String DB_Name = "200202B";
     static final int DB_Version = 1;
 
     // Columns for Account Table

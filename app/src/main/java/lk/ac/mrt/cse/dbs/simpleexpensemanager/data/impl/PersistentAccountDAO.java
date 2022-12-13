@@ -114,9 +114,11 @@ public class PersistentAccountDAO implements AccountDAO {
         if (cursor.getCount() > 0) {
             int n1 = cursor.getColumnIndex("balance");
             ContentValues cv = new ContentValues();
+            cursor.moveToFirst();
 
             switch (expenseType) {
                 case EXPENSE:
+                    System.out.println(n1);
                     double newBal1 = cursor.getDouble(n1) - amount;
                     cv.put("balance", newBal1);
                     database.update("Account_Table", cv, "accountNo=?", new String[]{accountNo});
